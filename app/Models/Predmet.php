@@ -11,6 +11,12 @@ class Predmet extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'razred',
+        'nastavnik_id',
+    ];
+
     public function nastavnik()
     {
         return $this->belongsTo(Nastavnik::class);

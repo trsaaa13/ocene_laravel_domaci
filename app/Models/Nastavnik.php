@@ -10,6 +10,12 @@ class Nastavnik extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime_prezime',
+        'godine',
+        'email',
+    ];
+
     public function predmeti()
     {
         return $this->hasMany(Predmet::class);

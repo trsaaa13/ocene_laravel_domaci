@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $nastavnik_seeder = new NastavnikSeeder;
+        $nastavnik_seeder->run();
+
+        $predmet_seeder = new PredmetSeeder;
+        $predmet_seeder->run();
     }
 }
